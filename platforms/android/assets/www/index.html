@@ -32,8 +32,8 @@
         <script type="text/javascript" src="js/jquery-2.2.1.js"></script>
         <script type="text/javascript" src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.js"></script>
         <!-- libreria de plugins -->
-        <script type="text/javascript" src = "platforms\android\assets\www\cordova.js"></script>
-        <script type="text/javascript" src = "js/camera.js"></script>
+        <script type="text/javascript" src="platforms\android\assets\www\cordova.js"></script>
+
         <title>Exposicion</title>
     </head>
     <body>
@@ -47,13 +47,12 @@
             </div>
         <!--contenido-->
             <div data-role="content" data-theme="c" align="center">
-                <img src="img/phonegap_logo.png" align="center">
+                <img src="img/phonegap_logo.png" align="center" width="280" height="280">
                 <nav data-role="collapsible" data-collapsed-icon="plus" data-expanded-icon="arrow-d" class="ui-mini">
                     <h3>Contenido</h3>
                     <ul data-role="listview" data-inset="true">
                         <li><a href="#plugins">Plugins PhoneGap</a></li>
-                        <li><a href="#">Button 2</a></li>
-                        <li><a href="#">Button 3</a></li>
+                        <li><a href="#formulario">Ejemplo Formulario</a></li>
                     </ul>
                 </nav>
 
@@ -81,8 +80,6 @@
                 <img src="img/phonegap-plugins.png" width="300" height="250" align="center">
                     <ul data-role="listview" data-inset="true" class="ui-mini">
                         <li><a href="#camera_plugin">Camera Plugin</a></li>
-                        <li><a href="#">Button 2</a></li>
-                        <li><a href="#">Button 3</a></li>
                     </ul>
 
             </div>
@@ -107,18 +104,305 @@
                 
                 <h3>Camera Plugin</h3>
                 <img src="img/camera.png" align="center">
-                <button id = "btn_camera" onclick="capturePhoto();">Camera Test</button>
+                <input type="button" value="Camera Test" onclick="capturePhoto()">
             </div>
         <!--pie de pagina-->
             <div data-role="footer" align="center" data-mini="true" class="ui-mini">
                 <p data-mini="true">Piza-Santella Apps</p>
             </div>
 
-        </div>        
+        </div>
+
+        <!--ejemplo de formulario-->
+
+        <div id="formulario" data-role="page" data-theme="a">
+        <!--cabecera-->
+            <div data-role="header" data-position="inline" align="center" data-theme="b">
+
+                <a href="#home" class="ui-btn ui-shadow ui-corner-all ui-icon-home ui-btn-icon-notext">Home</a>
+                <h1>PhoneGap</h1>
+                <a href="#home" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-l ui-btn-icon-notext">Atras</a>
+
+            </div>
+        <!--content-->    
+        <div data-role="content" class="ui-content" role="main">
+        <div class="content-primary">
+
+        <form action="#" method="get">
+
+            <h2>Mini form elements</h2>
+
+            <p>All form controls accept a <code>data-mini="true"</code> attribute that renders a smaller version of the <a href="forms-all.html" class="ui-link">standard-sized</a> form elements. In the case of grouped buttons, the <code>data-mini="true"</code> attribute can be added to the containing controlgroup. <a href="forms-all-compare.html" class="ui-link">Compare mini and normal</a> form elements side-by-side.</p>
+
+            <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br"><label for="name" class="ui-input-text">Text Input:</label><input type="text" name="name" id="name" value="" data-mini="true" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset ui-mini"></div>
+
+            <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br"><label for="textarea" class="ui-input-text">Textarea:</label><textarea cols="40" rows="8" name="textarea" id="textarea" data-mini="true" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset ui-mini"></textarea></div>
+
+            <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br"><label for="search" class="ui-input-text">Search Input:</label><div class="ui-input-search ui-shadow-inset ui-btn-corner-all ui-btn-shadow ui-icon-searchfield ui-body-c ui-mini"><input type="text" data-type="search" name="password" id="search" value="" data-mini="true" class="ui-input-text ui-body-c"><a href="#" class="ui-input-clear ui-btn ui-btn-up-c ui-shadow ui-btn-corner-all ui-mini ui-btn-icon-notext ui-input-clear-hidden" title="clear text" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="delete" data-iconpos="notext" data-theme="c" data-mini="true"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">clear text</span><span class="ui-icon ui-icon-delete ui-icon-shadow">&nbsp;</span></span></a></div></div>
+
+            <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br"><label for="slider2" id="slider2-label" class="ui-slider">Flip switch:</label><select name="slider2" id="slider2" data-role="slider" data-mini="true" class="ui-slider-switch">
+                    <option value="off">Off</option>
+                    <option value="on">On</option>
+                </select><div role="application" class="ui-slider ui-slider-switch ui-btn-down-c ui-btn-corner-all ui-slider-mini"><span class="ui-slider-label ui-slider-label-a ui-btn-active ui-btn-corner-all" role="img" style="width: 0%;">On</span><span class="ui-slider-label ui-slider-label-b ui-btn-down-c ui-btn-corner-all" role="img" style="width: 100%;">Off</span><div class="ui-slider-inneroffset"><a href="#" class="ui-slider-handle ui-btn ui-btn-up-c ui-shadow ui-btn-corner-all ui-slider-handle-snapping" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="c" role="slider" aria-valuemin="0" aria-valuemax="1" aria-valuenow="off" aria-valuetext="Off" title="Off" aria-labelledby="slider2-label" style="left: 0%;"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text"></span></span></a></div></div></div>
+
+            <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br"><label for="slider" class="ui-input-text ui-slider" id="slider-label">Slider:</label><input type="number" data-type="range" name="slider" id="slider" value="50" min="0" max="100" data-highlight="true" data-mini="true" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset ui-mini ui-slider-input"><div role="application" class="ui-slider  ui-btn-down-c ui-btn-corner-all ui-slider-mini"><div class="ui-slider-bg ui-btn-active ui-btn-corner-all" style="width: 50%;"></div><a href="#" class="ui-slider-handle ui-btn ui-btn-up-c ui-shadow ui-btn-corner-all" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="c" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-valuetext="50" title="50" aria-labelledby="slider-label" style="left: 50%;"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text"></span></span></a></div></div>
+
+            <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br"><fieldset data-role="controlgroup" data-mini="true" class="ui-corner-all ui-controlgroup ui-controlgroup-vertical ui-mini"><div role="heading" class="ui-controlgroup-label">Choose as many snacks as you'd like:</div><div class="ui-controlgroup-controls">
+                
+                <div class="ui-checkbox"><input type="checkbox" name="checkbox-1a" id="checkbox-1a" class="custom"><label for="checkbox-1a" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="checkbox-off" data-theme="c" data-mini="true" class="ui-btn ui-mini ui-btn-icon-left ui-checkbox-off ui-corner-top ui-btn-up-c"><span class="ui-btn-inner ui-corner-top"><span class="ui-btn-text">Cheetos</span><span class="ui-icon ui-icon-checkbox-off ui-icon-shadow">&nbsp;</span></span></label></div>
+                
+
+                <div class="ui-checkbox"><input type="checkbox" name="checkbox-2a" id="checkbox-2a" class="custom"><label for="checkbox-2a" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="checkbox-off" data-theme="c" data-mini="true" class="ui-btn ui-mini ui-btn-icon-left ui-checkbox-off ui-btn-up-c"><span class="ui-btn-inner"><span class="ui-btn-text">Doritos</span><span class="ui-icon ui-icon-checkbox-off ui-icon-shadow">&nbsp;</span></span></label></div>
+                
+
+                <div class="ui-checkbox"><input type="checkbox" name="checkbox-3a" id="checkbox-3a" class="custom"><label for="checkbox-3a" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="checkbox-off" data-theme="c" data-mini="true" class="ui-btn ui-mini ui-btn-icon-left ui-checkbox-off ui-btn-up-c"><span class="ui-btn-inner"><span class="ui-btn-text">Fritos</span><span class="ui-icon ui-icon-checkbox-off ui-icon-shadow">&nbsp;</span></span></label></div>
+                
+
+                <div class="ui-checkbox"><input type="checkbox" name="checkbox-4a" id="checkbox-4a" class="custom"><label for="checkbox-4a" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="checkbox-off" data-theme="c" data-mini="true" class="ui-btn ui-btn-up-c ui-mini ui-btn-icon-left ui-checkbox-off ui-corner-bottom ui-controlgroup-last"><span class="ui-btn-inner ui-corner-bottom ui-controlgroup-last"><span class="ui-btn-text">Sun Chips</span><span class="ui-icon ui-icon-checkbox-off ui-icon-shadow">&nbsp;</span></span></label></div>
+                
+            </div></fieldset></div>
+
+            <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br"><fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal ui-mini"><div role="heading" class="ui-controlgroup-label">Font styling:</div><div class="ui-controlgroup-controls">
+                
+                <div class="ui-checkbox"><input type="checkbox" name="checkbox-6" id="checkbox-6" class="custom"><label for="checkbox-6" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c" data-mini="true" class="ui-btn ui-btn-up-c ui-mini ui-checkbox-off ui-corner-left"><span class="ui-btn-inner ui-corner-left"><span class="ui-btn-text">b</span></span></label></div>
+                
+
+                <div class="ui-checkbox"><input type="checkbox" name="checkbox-7" id="checkbox-7" class="custom"><label for="checkbox-7" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c" data-mini="true" class="ui-btn ui-btn-up-c ui-mini ui-checkbox-off"><span class="ui-btn-inner"><span class="ui-btn-text"><em>i</em></span></span></label></div>
+                
+
+                <div class="ui-checkbox"><input type="checkbox" name="checkbox-8" id="checkbox-8" class="custom"><label for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c" data-mini="true" class="ui-btn ui-btn-up-c ui-mini ui-checkbox-off ui-corner-right ui-controlgroup-last"><span class="ui-btn-inner ui-corner-right ui-controlgroup-last"><span class="ui-btn-text">u</span></span></label></div>
+                
+            </div></fieldset></div>
+
+            <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br"><fieldset data-role="controlgroup" data-mini="true" class="ui-corner-all ui-controlgroup ui-controlgroup-vertical ui-mini"><div role="heading" class="ui-controlgroup-label">Choose a pet:</div><div class="ui-controlgroup-controls">
+                    
+                        <div class="ui-radio"><input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1" checked="checked"><label for="radio-choice-1" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="radio-off" data-theme="c" data-mini="true" class="ui-btn ui-btn-up-c ui-mini ui-btn-icon-left ui-radio-on ui-corner-top"><span class="ui-btn-inner ui-corner-top"><span class="ui-btn-text">Cat</span><span class="ui-icon ui-icon-shadow ui-icon-radio-on">&nbsp;</span></span></label></div>
+                        
+
+                        <div class="ui-radio"><input type="radio" name="radio-choice-1" id="radio-choice-2" value="choice-2"><label for="radio-choice-2" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="radio-off" data-theme="c" data-mini="true" class="ui-btn ui-btn-up-c ui-mini ui-btn-icon-left ui-radio-off"><span class="ui-btn-inner"><span class="ui-btn-text">Dog</span><span class="ui-icon ui-icon-radio-off ui-icon-shadow">&nbsp;</span></span></label></div>
+                        
+
+                        <div class="ui-radio"><input type="radio" name="radio-choice-1" id="radio-choice-3" value="choice-3"><label for="radio-choice-3" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="radio-off" data-theme="c" data-mini="true" class="ui-btn ui-mini ui-btn-icon-left ui-radio-off ui-btn-up-c"><span class="ui-btn-inner"><span class="ui-btn-text">Hamster</span><span class="ui-icon ui-icon-radio-off ui-icon-shadow">&nbsp;</span></span></label></div>
+                        
+
+                        <div class="ui-radio"><input type="radio" name="radio-choice-1" id="radio-choice-4" value="choice-4"><label for="radio-choice-4" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="radio-off" data-theme="c" data-mini="true" class="ui-btn ui-btn-up-c ui-mini ui-btn-icon-left ui-radio-off ui-corner-bottom ui-controlgroup-last"><span class="ui-btn-inner ui-corner-bottom ui-controlgroup-last"><span class="ui-btn-text">Lizard</span><span class="ui-icon ui-icon-radio-off ui-icon-shadow">&nbsp;</span></span></label></div>
+                        
+                </div></fieldset></div>
+
+            <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br"><fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal ui-mini"><div role="heading" class="ui-controlgroup-label">Layout view:</div><div class="ui-controlgroup-controls">
+                    
+                        <div class="ui-radio"><input type="radio" name="radio-choice-b" id="radio-choice-c" value="on" checked="checked"><label for="radio-choice-c" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c" data-mini="true" class="ui-btn ui-btn-up-c ui-mini ui-radio-on ui-btn-active ui-corner-left"><span class="ui-btn-inner ui-corner-left"><span class="ui-btn-text">List</span></span></label></div>
+                        
+                        <div class="ui-radio"><input type="radio" name="radio-choice-b" id="radio-choice-d" value="off"><label for="radio-choice-d" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c" data-mini="true" class="ui-btn ui-btn-up-c ui-mini ui-radio-off"><span class="ui-btn-inner"><span class="ui-btn-text">Grid</span></span></label></div>
+                        
+                        <div class="ui-radio"><input type="radio" name="radio-choice-b" id="radio-choice-e" value="other"><label for="radio-choice-e" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c" data-mini="true" class="ui-btn ui-btn-up-c ui-mini ui-radio-off ui-corner-right ui-controlgroup-last"><span class="ui-btn-inner ui-corner-right ui-controlgroup-last"><span class="ui-btn-text">Gallery</span></span></label></div>
+                        
+                </div></fieldset></div>
+
+            <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br"><label for="select-choice-1" class="select ui-select">Choose shipping method:</label><div class="ui-select"><div data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="arrow-d" data-iconpos="right" data-theme="c" data-mini="true" class="ui-btn ui-btn-up-c ui-shadow ui-btn-corner-all ui-mini ui-btn-icon-right"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text"><span>Standard: 7 day</span></span><span class="ui-icon ui-icon-arrow-d ui-icon-shadow">&nbsp;</span></span><select name="select-choice-1" id="select-choice-1" data-mini="true">
+                    <option value="standard">Standard: 7 day</option>
+                    <option value="rush">Rush: 3 days</option>
+                    <option value="express">Express: next day</option>
+                    <option value="overnight">Overnight</option>
+                </select></div></div></div>
+
+            <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br"><label for="select-choice-3" class="select ui-select">Your state:</label><div class="ui-select"><div data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="arrow-d" data-iconpos="right" data-theme="c" data-mini="true" class="ui-btn ui-btn-up-c ui-shadow ui-btn-corner-all ui-mini ui-btn-icon-right"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text"><span>Alabama</span></span><span class="ui-icon ui-icon-arrow-d ui-icon-shadow">&nbsp;</span></span><select name="select-choice-3" id="select-choice-3" data-mini="true">
+                    <option value="AL">Alabama</option>
+                    <option value="AK">Alaska</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="AR">Arkansas</option>
+                    <option value="CA">California</option>
+                    <option value="CO">Colorado</option>
+                    <option value="CT">Connecticut</option>
+                    <option value="DE">Delaware</option>
+                    <option value="FL">Florida</option>
+                    <option value="GA">Georgia</option>
+                    <option value="HI">Hawaii</option>
+                    <option value="ID">Idaho</option>
+                    <option value="IL">Illinois</option>
+                    <option value="IN">Indiana</option>
+                    <option value="IA">Iowa</option>
+                    <option value="KS">Kansas</option>
+                    <option value="KY">Kentucky</option>
+                    <option value="LA">Louisiana</option>
+                    <option value="ME">Maine</option>
+                    <option value="MD">Maryland</option>
+                    <option value="MA">Massachusetts</option>
+                    <option value="MI">Michigan</option>
+                    <option value="MN">Minnesota</option>
+                    <option value="MS">Mississippi</option>
+                    <option value="MO">Missouri</option>
+                    <option value="MT">Montana</option>
+                    <option value="NE">Nebraska</option>
+                    <option value="NV">Nevada</option>
+                    <option value="NH">New Hampshire</option>
+                    <option value="NJ">New Jersey</option>
+                    <option value="NM">New Mexico</option>
+                    <option value="NY">New York</option>
+                    <option value="NC">North Carolina</option>
+                    <option value="ND">North Dakota</option>
+                    <option value="OH">Ohio</option>
+                    <option value="OK">Oklahoma</option>
+                    <option value="OR">Oregon</option>
+                    <option value="PA">Pennsylvania</option>
+                    <option value="RI">Rhode Island</option>
+                    <option value="SC">South Carolina</option>
+                    <option value="SD">South Dakota</option>
+                    <option value="TN">Tennessee</option>
+                    <option value="TX">Texas</option>
+                    <option value="UT">Utah</option>
+                    <option value="VT">Vermont</option>
+                    <option value="VA">Virginia</option>
+                    <option value="WA">Washington</option>
+                    <option value="WV">West Virginia</option>
+                    <option value="WI">Wisconsin</option>
+                    <option value="WY">Wyoming</option>
+                </select></div></div></div>
+
+            <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br"><label for="select-choice-a" class="select ui-select">Choose shipping method:</label><div class="ui-select"><a href="#" role="button" id="select-choice-a-button" aria-haspopup="true" aria-owns="select-choice-a-menu" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="arrow-d" data-iconpos="right" data-theme="c" data-mini="true" class="ui-btn ui-btn-up-c ui-shadow ui-btn-corner-all ui-mini ui-btn-icon-right"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text"><span>Custom menu example</span></span><span class="ui-icon ui-icon-arrow-d ui-icon-shadow">&nbsp;</span></span></a><select name="select-choice-a" id="select-choice-a" data-native-menu="false" data-mini="true" tabindex="-1">
+                    <option data-placeholder="true">Custom menu example</option>
+                    <option value="standard">Standard: 7 day</option>
+                    <option value="rush">Rush: 3 days</option>
+                    <option value="express">Express: next day</option>
+                    <option value="overnight">Overnight</option>
+                </select><div style="display: none;"><!-- placeholder --></div></div></div>
+
+        <div class="ui-body ui-body-b">
+        <fieldset class="ui-grid-a">
+                <div class="ui-block-a"><div data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="null" data-iconpos="null" data-theme="d" data-mini="true" class="ui-btn ui-btn-up-d ui-shadow ui-btn-corner-all ui-mini ui-submit" aria-disabled="false"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Cancel</span></span><button type="submit" data-theme="d" data-mini="true" class="ui-btn-hidden" aria-disabled="false">Cancel</button></div></div>
+                <div class="ui-block-b"><div data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="null" data-iconpos="null" data-theme="a" data-mini="true" class="ui-btn ui-btn-up-a ui-shadow ui-btn-corner-all ui-mini ui-submit" aria-disabled="false"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Submit</span></span><button type="submit" data-theme="a" data-mini="true" class="ui-btn-hidden" aria-disabled="false">Submit</button></div></div>
+        </fieldset>
+        </div>
+    </form>
+    </div><!--/content-primary -->      
+    
+    <div class="content-secondary">
+        
+        <div data-role="collapsible" data-collapsed="true" data-theme="b" data-content-theme="d" class="ui-collapsible ui-collapsible-inset ui-collapsible-collapsed"><h3 class="ui-collapsible-heading ui-collapsible-heading-collapsed"><a href="#" class="ui-collapsible-heading-toggle ui-btn ui-btn-up-b ui-fullsize ui-btn-icon-left ui-corner-top ui-corner-bottom" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="plus" data-iconpos="left" data-theme="b" data-mini="false"><span class="ui-btn-inner ui-corner-top ui-corner-bottom"><span class="ui-btn-text">More in this section<span class="ui-collapsible-heading-status"> click to expand contents</span></span><span class="ui-icon ui-icon-plus ui-icon-shadow">&nbsp;</span></span></a></h3><div class="ui-collapsible-content ui-body-d ui-collapsible-content-collapsed" aria-hidden="true">
+            
+                
+                
+                <ul data-role="listview" data-theme="c" data-dividertheme="d" class="ui-listview">
+                
+                    <li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-d">Form elements</li>
+                    <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-up-c ui-btn-icon-right ui-li-has-arrow ui-li"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="docs-forms.html" class="ui-link-inherit">Form basics</a></div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
+                    <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-up-c ui-btn-icon-right ui-li-has-arrow ui-li"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="forms-all.html" class="ui-link-inherit">Form element gallery</a></div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
+                    <li data-theme="a" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-btn-up-a"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="forms-all-mini.html" class="ui-link-inherit">Mini form element gallery</a></div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
+                    <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-up-c ui-btn-icon-right ui-li-has-arrow ui-li"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="textinputs/" class="ui-link-inherit">Text inputs</a></div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
+                    <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-up-c ui-btn-icon-right ui-li-has-arrow ui-li"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="search/" class="ui-link-inherit">Search inputs</a></div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
+                    <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-up-c ui-btn-icon-right ui-li-has-arrow ui-li"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="slider/" class="ui-link-inherit">Slider</a></div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
+                    <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-up-c ui-btn-icon-right ui-li-has-arrow ui-li"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="switch/" class="ui-link-inherit">Flip toggle switch</a></div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
+                    <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-up-c ui-btn-icon-right ui-li-has-arrow ui-li"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="radiobuttons/" class="ui-link-inherit">Radio buttons</a></div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
+                    <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-up-c ui-btn-icon-right ui-li-has-arrow ui-li"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="checkboxes/" class="ui-link-inherit">Checkboxes</a></div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
+                    <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-up-c ui-btn-icon-right ui-li-has-arrow ui-li"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="selects/" class="ui-link-inherit">Select menus</a></div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
+                    <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-up-c ui-btn-icon-right ui-li-has-arrow ui-li"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="forms-themes.html" class="ui-link-inherit">Theming forms</a></div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
+                    <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-up-c ui-btn-icon-right ui-li-has-arrow ui-li"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="forms-all-native.html" class="ui-link-inherit">Native form elements</a></div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
+                    <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-up-c ui-btn-icon-right ui-li-has-arrow ui-li ui-li-last"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="forms-sample.html" class="ui-link-inherit">Submitting forms</a></div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
+                    
+    
+                </ul>
+        </div></div>
+    </div>      
+   </div>
+    </div>
+    <!--pie de pagina-->
+        <div data-role="footer" align="center" data-mini="true" class="ui-mini">
+                <p data-mini="true">Piza-Santella Apps</p>
+            </div>
+
+        </div> 
+</div>    
 
 
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/camera.js"></script>
+        <script>
+    var pictureSource;   // picture source
+    var destinationType; // sets the format of returned value
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready",onDeviceReady,false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        pictureSource=navigator.camera.PictureSourceType;
+        destinationType=navigator.camera.DestinationType;
+    }
+
+    // Called when a photo is successfully retrieved
+    //
+    function onPhotoDataSuccess(imageData) {
+      // Uncomment to view the base64-encoded image data
+      // console.log(imageData);
+
+      // Get image handle
+      //
+      var smallImage = document.getElementById('smallImage');
+
+      // Unhide image elements
+      //
+      smallImage.style.display = 'block';
+
+      // Show the captured photo
+      // The in-line CSS rules are used to resize the image
+      //
+      smallImage.src = "data:image/jpeg;base64," + imageData;
+    }
+
+    // Called when a photo is successfully retrieved
+    //
+    function onPhotoURISuccess(imageURI) {
+      // Uncomment to view the image file URI
+      // console.log(imageURI);
+
+      // Get image handle
+      //
+      var largeImage = document.getElementById('largeImage');
+
+      // Unhide image elements
+      //
+      largeImage.style.display = 'block';
+
+      // Show the captured photo
+      // The in-line CSS rules are used to resize the image
+      //
+      largeImage.src = imageURI;
+    }
+
+    // A button will call this function
+    //
+    function capturePhoto() {
+      // Take picture using device camera and retrieve image as base64-encoded string
+      navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
+      destinationType: destinationType.DATA_URL });
+    }
+
+    // A button will call this function
+    //
+    function capturePhotoEdit() {
+      // Take picture using device camera, allow edit, and retrieve image as base64-encoded string
+      navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 20, allowEdit: true,
+        destinationType: destinationType.DATA_URL });
+    }
+
+    // A button will call this function
+    //
+    function getPhoto(source) {
+      // Retrieve image file location from specified source
+      navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 50,
+        destinationType: destinationType.FILE_URI,
+        sourceType: source });
+    }
+
+    // Called if something bad happens.
+    //
+    function onFail(message) {
+      alert('Failed because: ' + message);
+    }
+    </script>
         <script type="text/javascript">
             app.initialize();
         </script>

@@ -80,6 +80,7 @@
                 <img src="img/phonegap-plugins.png" width="300" height="250" align="center">
                     <ul data-role="listview" data-inset="true" class="ui-mini">
                         <li><a href="#camera_plugin">Camera Plugin</a></li>
+                        <li><a href="#geolocation_plugin">Geolocation Plugin</a></li>
                     </ul>
 
             </div>
@@ -112,6 +113,31 @@
             </div>
 
         </div>
+		
+		<div id="geolocation_plugin" data-role="page" data-theme="a">
+		<!--cabecera-->
+		    <div data-role="header" data-position="inline" align="center" data-theme="b">
+
+		        <a href="#home" class="ui-btn ui-shadow ui-corner-all ui-icon-home ui-btn-icon-notext">Home</a>
+		        <h1>PhoneGap</h1>
+		        <a href="#plugins" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-l ui-btn-icon-notext">Atras</a>
+
+		    </div>
+		<!--contenido-->
+        <div data-role="content" data-theme="c" align="center">
+            <h3>Geolocation Plugin</h3>
+            <img src="img/geolocation.png" align="center" height="200" width="200">
+            <input type="button" value="Geolocation Test" onclick="getGeoLocation()">
+        </div>
+		<!--pie de pagina-->
+		    <div data-role="footer" align="center" data-mini="true" class="ui-mini">
+		        <p data-mini="true">Piza-Santella Apps</p>
+		    </div>
+
+		</div>
+		
+
+
 
         <!--ejemplo de formulario-->
 
@@ -380,6 +406,13 @@
       destinationType: destinationType.DATA_URL });
     }
 
+     function capturePhoto() {
+      // Take picture using device camera and retrieve image as base64-encoded string
+      navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
+      destinationType: destinationType.DATA_URL });
+    }
+
+
     // A button will call this function
     //
     function capturePhotoEdit() {
@@ -402,6 +435,29 @@
     function onFail(message) {
       alert('Failed because: ' + message);
     }
+
+    var onSuccess = function(position) {
+    alert('Latitude: '          + position.coords.latitude          + '\n' +
+          'Longitude: '         + position.coords.longitude         + '\n' +
+          'Altitude: '          + position.coords.altitude          + '\n' +
+          'Accuracy: '          + position.coords.accuracy          + '\n' +
+          'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+          'Heading: '           + position.coords.heading           + '\n' +
+          'Speed: '             + position.coords.speed             + '\n' +
+          'Timestamp: '         + position.timestamp                + '\n');
+	};
+
+	// onError Callback receives a PositionError object
+	//
+	function onError(error) {
+	    alert('code: '    + error.code    + '\n' +
+	          'message: ' + error.message + '\n');
+	}
+
+	function getGeoLocation() {
+		navigator.geolocation.getCurrentPosition(onSuccess, onError);
+	}
+
     </script>
         <script type="text/javascript">
             app.initialize();
